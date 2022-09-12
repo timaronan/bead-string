@@ -1,0 +1,39 @@
+{
+  "name": "d3-beadString",
+  "version": "1.1.2",
+  "description": "d3 v4 beadString interactive chart",
+  "keywords": [
+    "d3",
+    "d3-module",
+    "beadString",
+    "linechart"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "build/d3-beadString.js",
+  "module": "index",
+  "jsnext:main": "index",
+  "homepage": "https://github.com/timaronan/d3-beadString",
+  "author": {
+    "name": "timaronan",
+    "url": "https://timaronan.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timaronan/d3-beadString.git"
+  },
+  "scripts": {
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -n d3 -o build/d3-beadString.js -- index.js",
+    "test": "tape 'test/beadString-test.js'",
+    "prepublish": "npm run test && uglifyjs build/d3-beadString.js -c -m -o build/d3-beadString.min.js",
+    "postpublish": "zip -j build/d3-beadString.zip -- LICENSE README.md build/d3-beadString.js build/d3-beadString.min.js"
+  },
+  "dependencies": {
+    "d3-selection": "3.0.0",
+    "d3-transition": "3.0.1"
+  },
+  "devDependencies": {
+    "rollup": "0.41",
+    "tape": "4",
+    "uglify-js": ">=2.6.0"
+  }
+}
