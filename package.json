@@ -1,5 +1,5 @@
 {
-  "name": "d3-beadString",
+  "name": "d3-beadstring",
   "version": "0.0.1",
   "description": "d3 v4 beadString interactive chart",
   "keywords": [
@@ -13,13 +13,10 @@
   "module": "index",
   "jsnext:main": "index",
   "homepage": "https://github.com/timaronan/d3-beadString",
-  "author": {
-    "name": "timaronan",
-    "url": "https://timaronan.com/"
-  },
+  "author": "timaronan (https://timaronan.com/)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/timaronan/d3-beadString.git"
+    "url": "git+https://github.com/timaronan/d3-beadString.git"
   },
   "scripts": {
     "pretest": "rm -rf build && mkdir build && rollup -f umd -n d3 -o build/d3-beadString.js -- index.js",
@@ -35,5 +32,11 @@
     "rollup": "0.41",
     "tape": "4",
     "uglify-js": ">=2.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/timaronan/d3-beadString/issues"
+  },
+  "directories": {
+    "test": "test"
   }
 }

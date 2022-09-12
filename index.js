@@ -1,1 +1,1 @@
-export {default as chaos} from "./src/chaos";
+export {default as beadString} from "./src/beadString";
